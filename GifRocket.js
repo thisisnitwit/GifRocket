@@ -25,12 +25,12 @@ class Script {
 
     process_outgoing_response({ request, response }) {
         let gif = '';
-        if((request.url == 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&limit=1') || (request.url == 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&limit=1')) {
-            gif = response.content.data.image_original_url;
-        } else {
+        if(Array.isArray(response.content.data)) {
             const count = response.content.data.length - 1;
             const i = Math.floor((Math.random() * count));
             gif = response.content.data[i].images.original.url;
+        }else {
+            gif = response.content.data.image_original_url;
         }
         return {
             content: {
