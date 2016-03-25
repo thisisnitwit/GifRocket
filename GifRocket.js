@@ -10,20 +10,19 @@ class Script {
         const trigger = request.data.trigger_word.toLowerCase() + ' ';
         phrase = request.data.text.toLowerCase().replace(trigger, '').replace(/ /g, '+');
         let u = '';
-        switch(trigger) {
-            case '/gif ':
-                if(phrase == 'random') {
-                    u = request.url + 'gifs/random?api_key=dc6zaTOxFJmzC&limit=1';
-                } else {
-                    u = request.url + 'gifs/search?api_key=dc6zaTOxFJmzC&q=' + phrase;
-                }
-            case '/sticker ':
-                if(phrase == 'random') {
-                    u = request.url + 'stickers/random?api_key=dc6zaTOxFJmzC&limit=1';
-                } else {
-                    u = request.url + 'stickers/search?api_key=dc6zaTOxFJmzC&q=' + phrase;
-                }
-        }
+        if(trigger.indexOf('gif') !== -1) {
+            if (phrase == 'random') {
+                u = request.url + 'gifs/random?api_key=dc6zaTOxFJmzC&limit=1';
+            } else {
+                u = request.url + 'gifs/search?api_key=dc6zaTOxFJmzC&q=' + phrase;
+            }
+        } else {
+            if(phrase == 'random') {
+                u = request.url + 'stickers/random?api_key=dc6zaTOxFJmzC&limit=1';
+            } else {
+                u = request.url + 'stickers/search?api_key=dc6zaTOxFJmzC&q=' + phrase;
+            }
+       }
         return {
             url: u,
             headers: request.headers,
