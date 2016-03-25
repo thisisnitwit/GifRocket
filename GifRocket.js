@@ -5,13 +5,17 @@ const config = {
 class Script {
     /**
      * @params {object} request
+     * @params {string} trigger
      */
     prepare_outgoing_request({ request }) {
         const trigger = request.data.trigger_word.toLowerCase() + ' ';
-        const phrase = request.data.text.toLowerCase().replace(trigger, '').replace(/ /g, '+');
-
-        let u = request.url + '?api_key=dc6zaTOxFJmzC&limit=1&q=' + phrase;
-        console.log(u);
+        phrase = request.data.text.toLowerCase().replace(trigger, '').replace(/ /g, '+');
+        let u = '';
+        if(phrase == 'random') {
+            u = request.url + 'random?api_key=dc6zaTOxFJmzC&limit=1';
+        } else {
+            u = request.url + 'search?api_key=dc6zaTOxFJmzC&limit=1&q=' + phrase;
+        }
         return {
             url: u,
             headers: request.headers,
@@ -20,7 +24,12 @@ class Script {
     }
 
     process_outgoing_response({ request, response }) {
-        const gif = response.content.data[0].images.original.url;
+        let gif = '';
+        if(request.url == 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&limit=1') {
+            gif = response.content.data.image_original_url;
+        } else {
+            gif = response.content.data[0].images.original.url;
+        }
         return {
             content: {
                 attachments: [
