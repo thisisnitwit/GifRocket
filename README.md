@@ -3,6 +3,8 @@
 <p>
 <b><a href="#overview">Overview</a></b>
 |
+<b><a href="#usage">How to use</a></b>
+|
 <b><a href="#installation">Installation</a></b>
 |
 <b><a href="#team">Team</a></b>
@@ -12,7 +14,12 @@
 <br /><br />
 
 ## Overview <a name="overview"></a>
-GifRocket is a slash-Command which sends your given phrases to Giphy and returns any according gif.
+GifRocket is a slash-command which sends your given phrases to Giphy and returns any according gif.
+<br /><br /><br /><br />
+
+## How to use <a name="usage"></a>
+GifRocket reacts on a slash-command defined by you during setup. For example entering `/gif test`shows a gif relating to the word `test`.<br />
+There is also an easteregg: try to use `random` as phrase and receive a random gif. Example: `/gif random`.
 <br /><br /><br /><br />
 
 ## Installation <a name="installation"></a>

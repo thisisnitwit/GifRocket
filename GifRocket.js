@@ -29,7 +29,7 @@ class Script {
             const count = response.content.data.length - 1;
             const i = Math.floor((Math.random() * count));
             gif = response.content.data[i].images.original.url;
-        }else {
+        } else {
             gif = response.content.data.image_original_url;
         }
         return {
