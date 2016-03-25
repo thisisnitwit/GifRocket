@@ -25,7 +25,7 @@ class Script {
 
     process_outgoing_response({ request, response }) {
         let gif = '';
-        if(request.url == 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&limit=1') {
+        if((request.url == 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&limit=1') || (request.url == 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&limit=1')) {
             gif = response.content.data.image_original_url;
         } else {
             gif = response.content.data[0].images.original.url;
