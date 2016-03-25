@@ -1,3 +1,7 @@
+const config = {
+    color: '#225159'
+};
+
 class Script {
     /**
      * @params {object} request
@@ -21,7 +25,8 @@ class Script {
             content: {
                 attachments: [
                     {
-                        image_url: gif
+                        image_url: gif,
+                        color: ((config['color'] != '') ? '#' + config['color'].replace('#', '') : '#225159')
                     }
                 ]
             }
