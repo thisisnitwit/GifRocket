@@ -18,7 +18,7 @@ GifRocket is a slash-command which sends your given phrases to Giphy and returns
 <br /><br /><br /><br />
 
 ## How to use <a name="usage"></a>
-GifRocket reacts on a slash-command defined by you during setup. For example entering `/gif test`shows a gif relating to the word `test`.<br />
+GifRocket reacts on a slash-command defined by you during setup. For example entering `/gif test` shows a gif relating to the word `test`.<br />
 There is also an easteregg: try to use `random` as phrase and receive a random gif. Example: `/gif random`.
 <br /><br /><br /><br />
 
@@ -60,7 +60,7 @@ Set the trigger words on which the command should be fired. For example set `/gi
 <br /><br />
 
 ##### URLs
-In thies field you *must* enter `http://api.giphy.com/v1/gifs/search`
+In thies field you *must* enter `http://api.giphy.com/v1/gifs/`
 <br /><br />
 
 ##### Send as
