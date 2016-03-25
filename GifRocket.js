@@ -32,22 +32,30 @@ class Script {
 
     process_outgoing_response({ request, response }) {
         let gif = '';
-        if(Array.isArray(response.content.data)) {
-            const count = response.content.data.length - 1;
-            const i = Math.floor((Math.random() * count));
-            gif = response.content.data[i].images.original.url;
-        } else {
-            gif = response.content.data.image_original_url;
-        }
-        return {
-            content: {
-                attachments: [
-                    {
-                        image_url: gif,
-                        color: ((config['color'] != '') ? '#' + config['color'].replace('#', '') : '#225159')
-                    }
-                ]
+        if(response.content.data.length !== 0) {
+            if(Array.isArray(response.content.data)) {
+                const count = response.content.data.length - 1;
+                const i = Math.floor((Math.random() * count));
+                gif = response.content.data[i].images.original.url;
+            } else {
+                gif = response.content.data.image_original_url;
             }
-        };
+            return {
+                content: {
+                    attachments: [
+                        {
+                            image_url: gif,
+                            color: ((config['color'] != '') ? '#' + config['color'].replace('#', '') : '#225159')
+                        }
+                    ]
+                }
+            };
+        } else {
+            return {
+                content: {
+                    text: 'nice try, but I haven\'t found anything :cold_sweat:'
+                }
+            };
+        }
     }
 }
