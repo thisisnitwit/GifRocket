@@ -11,13 +11,13 @@ class Script {
         phrase = request.data.text.toLowerCase().replace(trigger, '').replace(/ /g, '+');
         let u = '';
         if(trigger.indexOf('gif') !== -1) {
-            if (phrase == 'random') {
+            if (phrase.indexOf('random') !== -1) {
                 u = request.url + 'gifs/random?api_key=dc6zaTOxFJmzC&limit=1';
             } else {
                 u = request.url + 'gifs/search?api_key=dc6zaTOxFJmzC&q=' + phrase;
             }
         } else {
-            if(phrase == 'random') {
+            if (phrase.indexOf('random') !== -1) {
                 u = request.url + 'stickers/random?api_key=dc6zaTOxFJmzC&limit=1';
             } else {
                 u = request.url + 'stickers/search?api_key=dc6zaTOxFJmzC&q=' + phrase;
