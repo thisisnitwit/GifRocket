@@ -8,7 +8,7 @@ class Script {
      */
     prepare_outgoing_request({ request }) {
         const trigger = request.data.trigger_word.toLowerCase() + ' ';
-        phrase = request.data.text.toLowerCase().replace(trigger, '').replace(/ /g, '+');
+        const phrase = request.data.text.toLowerCase().replace(trigger, '').replace(/ /g, '+');
         let u = '';
         if(trigger.indexOf('gif') !== -1) {
             if (phrase.indexOf('random') !== -1) {
