@@ -67,7 +67,7 @@ Set the trigger words on which the command should be fired. You have to set `/gi
 <br /><br />
 
 ##### URLs
-In thies field you *must* enter `https://api.giphy.com/v1/`
+In this field you *must* enter `https://api.giphy.com/v1/`
 <br /><br />
 
 ##### Send as
