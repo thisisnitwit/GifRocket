@@ -32,8 +32,9 @@ Try to use `/sticker random` as phrase and receive a random sticker.
 ## Installation <a name="installation"></a>
 
 ### Download code
-Download source from [here][source].<br />
+Download source using the button link at the top of this page.<br />
 Unzip Sources.
+Alternatively, clone this repo using your favorite git client.
 <br /><br /><br />
 
 ### Configure Rocket.Chat
