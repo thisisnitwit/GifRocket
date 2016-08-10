@@ -20,8 +20,8 @@ GifRocket is a slash-command which sends your given phrases to Giphy and returns
 ## How to use <a name="usage"></a>
 
 ### Gifs
-GifRocket reacts on a slash-command. For example entering `/gif test` shows a gif relating to the word `test`.<br />
-Try to use `/gif random` as phrase and receive a random gif.
+GifRocket reacts on a slash-command. For example entering `!gif test` shows a gif relating to the word `test`.<br />
+Try to use `!gif random` as phrase and receive a random gif.
 <br /><br />
 
 ### Sticker
@@ -63,7 +63,7 @@ Self-explaining option. Insert the desired channel which should be listened.
 <br /><br />
 
 ##### Trigger Words
-Set the trigger words on which the command should be fired. You have to set `/gif,/sticker` in here. Every time you write `/gif` or `/sticker`, everything after that string will be pushed zu Giphy.
+Set the trigger words on which the command should be fired. You have to set `!gif,!sticker` in here. Every time you write `!gif` or `/sticker`, everything after that string will be pushed zu Giphy.
 <br /><br />
 
 ##### URLs
