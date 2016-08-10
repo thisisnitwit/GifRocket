@@ -20,20 +20,21 @@ GifRocket is a slash-command which sends your given phrases to Giphy and returns
 ## How to use <a name="usage"></a>
 
 ### Gifs
-GifRocket reacts on a slash-command. For example entering `gif test` shows a gif relating to the word `test`.<br />
-Try to use `gif random` as phrase and receive a random gif.
+GifRocket reacts on a slash-command. For example entering `/gif test` shows a gif relating to the word `test`.<br />
+Try to use `/gif random` as phrase and receive a random gif.
 <br /><br />
 
 ### Sticker
-GifRocket reacts on a slash-command. For example entering `sticker test` shows a sticker relating to the word `test`.<br />
-Try to use `sticker random` as phrase and receive a random sticker.
+GifRocket reacts on a slash-command. For example entering `/sticker test` shows a sticker relating to the word `test`.<br />
+Try to use `/sticker random` as phrase and receive a random sticker.
 <br /><br /><br /><br />
 
 ## Installation <a name="installation"></a>
 
 ### Download code
-Download source.<br />
+Download source using the button link at the top of this page.<br />
 Unzip Sources.
+Alternatively, clone this repo using your favorite git client.
 <br /><br /><br />
 
 ### Configure Rocket.Chat
@@ -63,7 +64,7 @@ Self-explaining option. Insert the desired channel which should be listened.
 <br /><br />
 
 ##### Trigger Words
-Set the trigger words on which the command should be fired. You have to set `gif,sticker` in here. Every time you write `gif` or `sticker`, everything after that string will be pushed zu Giphy.
+Set the trigger words on which the command should be fired. You have to set `/gif,/sticker` in here. Every time you write `/gif` or `/sticker`, everything after that string will be pushed zu Giphy.
 <br /><br />
 
 ##### URLs
@@ -104,6 +105,7 @@ Licensed under the [MIT license][license].
 
 <!-- links -->
 [rocketchat]: https://rocket.chat/ "Rocket.Chat"
+[source]: https://git.finndrop-office.de/plugins/servlet/archive/projects/FDS/repos/gifrocket?at=refs%2Fheads%2Fmaster "Download GifRocket"
 [finndrop]: https://www.finndrop.de "Finndrop Studios"
 [license]: license/LICENSE-MIT.txt "MIT License"
 
