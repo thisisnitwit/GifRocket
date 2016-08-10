@@ -25,8 +25,8 @@ Try to use `!gif random` as phrase and receive a random gif.
 <br /><br />
 
 ### Sticker
-GifRocket reacts on a slash-command. For example entering `/sticker test` shows a sticker relating to the word `test`.<br />
-Try to use `/sticker random` as phrase and receive a random sticker.
+GifRocket reacts on a slash-command. For example entering `!sticker test` shows a sticker relating to the word `test`.<br />
+Try to use `!sticker random` as phrase and receive a random sticker.
 <br /><br /><br /><br />
 
 ## Installation <a name="installation"></a>
@@ -64,7 +64,7 @@ Self-explaining option. Insert the desired channel which should be listened.
 <br /><br />
 
 ##### Trigger Words
-Set the trigger words on which the command should be fired. You have to set `!gif,!sticker` in here. Every time you write `!gif` or `/sticker`, everything after that string will be pushed zu Giphy.
+Set the trigger words on which the command should be fired. You have to set `!gif,!sticker` in here. Every time you write `!gif` or `!sticker`, everything after that string will be pushed zu Giphy.
 <br /><br />
 
 ##### URLs
