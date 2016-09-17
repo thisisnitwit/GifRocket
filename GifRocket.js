@@ -44,6 +44,7 @@ class Script {
                 content: {
                     attachments: [
                         {
+                            title: "Gify",
                             image_url: gif,
                             color: ((config['color'] != '') ? '#' + config['color'].replace('#', '') : '#225159')
                         }
